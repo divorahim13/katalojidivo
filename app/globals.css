@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #333b2a;
+  --cream: #fcf9f3;
+  --terracotta: #803c1a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { overflow-x: hidden; background: #fcf9f3; }
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+/* Scroll progress */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: #803c1a;
+  z-index: 9996;
+  width: 0;
+  transition: width 0.1s linear;
+}
+
+/* Cursor */
+#cursor-dot, #cursor-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+}
+#cursor-dot { width: 8px; height: 8px; background: var(--primary); transform: translate(-50%,-50%); }
+#cursor-ring {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--primary);
+  transform: translate(-50%,-50%);
+  opacity: 0.4;
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+}
+@media (max-width: 768px) { #cursor-dot, #cursor-ring { display: none; } }
+
+/* Marquee */
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Section label */
+.section-label {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-bebas);
+  letter-spacing: 0.2em; font-size: 0.85rem; color: #803c1a;
+}
+.section-label::before {
+  content: '';
+  display: inline-block; width: 20px; height: 1px; background: currentColor;
+}
+
+/* Mobile drawer */
+.drawer { transform: translateX(-100%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+.drawer.open { transform: translateX(0); }
+.drawer-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+/* No scrollbar */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Menu card hover */
+.menu-card-img { transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+.group:hover .menu-card-img { transform: scale(1.06); }
+.menu-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(51,59,42,0.65) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.group:hover .menu-overlay { opacity: 1; }
+
+/* Info card hover */
+.info-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.info-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(51,59,42,0.1); }
+
+/* Nav scrolled */
+.nav-scrolled {
+  background: rgba(252,249,243,0.95) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 24px rgba(51,59,42,0.08);
+}
+
+/* Filter tab */
+.filter-tab { position: relative; cursor: pointer; transition: color 0.3s; }
+.filter-tab::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px; background: #333b2a; transition: width 0.3s ease;
+}
+.filter-tab.active { color: #333b2a; font-weight: 600; }
+.filter-tab.active::after { width: 100%; }
+
+/* Promo glow */
+@keyframes promoGlow {
+  0%,100% { box-shadow: 0 0 30px rgba(128,60,26,0.25); }
+  50%      { box-shadow: 0 0 60px rgba(128,60,26,0.45); }
+}
+.promo-glow { animation: promoGlow 3s ease-in-out infinite; }
+
+/* Hour row hover */
+.hour-row { transition: background 0.2s ease, padding-left 0.2s ease; border-radius: 0.5rem; }
+.hour-row:hover { background: rgba(221,230,206,0.4); padding-left: 0.5rem; }
+.hour-row.today { background: rgba(221,230,206,0.5); }
+
+/* Value card hover */
+.value-card { border-left: 3px solid transparent; transition: all 0.35s ease; }
+.value-card:hover { border-left-color: #fff; padding-left: 1.5rem; }
