@@ -1,3 +1,6 @@
+export const GOFOOD_URL = 'https://gofood.link/a/BNkfoSL'
+export const WA_URL = 'https://wa.me/62'
+
 export const IMGS = {
   hero:      'https://lh3.googleusercontent.com/aida-public/AB6AXuDWOfrhl4ozDc088wP7MruPya6CXfT-Q9ConWF7e87JZP7PMzs8G-_rsdGHrPHovDYNVCXXzfA168AORAAoGPQu-EE4YROcAfCGDQmAUWf6eTWNo18rqy132n-F8OpNCyHfEvmpawvprQ_1JxqVtg6X8lP2Pf2mEcUH8aBBgU3RGSmaI6DnrKpmoX-i5mGd8hDejCee8pLUUXsovD_mpcIdo7kvmmhrE2AbAv-LB8IE61f-mhF0Xti9yOcpXswOd1i3_o47RSKY1rc',
   latte:     'https://lh3.googleusercontent.com/aida-public/AB6AXuDQHj2B40YzSRh-f4QE6zie2MUP6KNExlNsNX0UJLfg_08cHaJyHNsHcvUcDyaXSZwtjoyyfgzmdtz4_r3C7oY6NAph9QPpscxmAkXD_HfEzo-YCTNSZsggPt1GqiubuWF3TP4QAiZtgp2AvmJC2T6JyudbeS26MH4Gak0Ho0gk8BqojryxV8v66nYBSs-7_e5fA-TtEFxvjVxQ3RurQULP8iRv9EDSb1uB4qUeBbcBnfNxcgxw1BMW-A6R2Qjwz9YE-VAn76_k7nk',

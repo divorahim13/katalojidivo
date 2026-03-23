@@ -1,15 +1,15 @@
+import Icons from './Icons'
+
 export default function WhatsAppButton() {
   return (
-    <a
-      href="https://wa.me/62"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="WhatsApp"
-      className="fixed bottom-8 right-8 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform duration-300"
-    >
-      <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-        <path d="M12.031 6.172c-2.32 0-4.591.899-6.393 2.505-3.906 3.48-4.236 9.485-1.517 13.011l-1.02 3.841 3.944-1.033c1.518.826 3.161 1.259 4.825 1.259h.01c5.676 0 10.293-4.617 10.293-10.293 0-2.751-1.073-5.343-3.022-7.292-1.948-1.947-4.542-3.031-7.12-3.031zm5.341 14.502c-.244.685-1.42 1.248-1.956 1.332-.489.078-1.125.138-1.785-.145-.66-.283-1.426-.534-2.454-1.002-4.144-1.88-6.844-6.107-7.051-6.386-.208-.279-1.688-2.245-1.688-4.283 0-2.037 1.063-3.037 1.44-3.447.377-.41 1.02-.512 1.397-.512h.41c.264 0 .528.01.754.546.226.537.792 1.946.867 2.09.075.145.125.313.025.513-.1.2-.15.324-.3.5-.15.176-.313.393-.45.526-.15.146-.312.304-.138.6.176.297.778 1.285 1.669 2.074.891.789 1.642 1.033 1.942 1.182.299.148.473.125.65-.075.176-.2.754-.877.954-1.176.201-.299.402-.25.678-.15.277.1 1.761.877 2.918 1.442 3.42 1.691.226.113.376.176.452.277.25.3.25.877-.04.146z"/>
-      </svg>
+    <a href="https://wa.me/62" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp"
+      className="fixed bottom-6 right-6 w-13 h-13 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-xl shadow-black/20 z-50 hover:scale-110 hover:shadow-2xl transition-all duration-300 group"
+      style={{ width: 52, height: 52 }}>
+      <Icons.WhatsApp className="w-6 h-6"/>
+      {/* Tooltip */}
+      <span className="absolute right-full mr-3 bg-[#1f2418] text-white text-xs font-medium px-3 py-1.5 rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        Chat WhatsApp
+      </span>
     </a>
   )
 }

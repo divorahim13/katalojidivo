@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import AnimateIn from '@/components/AnimateIn'
-import { IMGS } from '@/lib/constants'
+import { IMGS, GOFOOD_URL } from '@/lib/constants'
 
 // ─── DATA ─────────────────────────────────────────────────────────
 const CATEGORIES = [
@@ -226,7 +226,7 @@ export default function MenuPage() {
               <p className="font-label tracking-widest text-[#c4714b] text-xs mb-1">⚡ JANGAN SAMPAI KEHABISAN</p>
               <h2 className="font-headline text-2xl md:text-3xl text-white">Yang Paling Banyak Dipesan</h2>
             </div>
-            <a href="https://gofood.co.id" target="_blank" rel="noopener noreferrer"
+            <a href={GOFOOD_URL} target="_blank" rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full border border-white/10 transition-colors flex-shrink-0">
               🛵 Pesan via GoFood
             </a>
@@ -290,7 +290,7 @@ export default function MenuPage() {
               className="block text-center bg-white text-primary font-bold text-xs py-2.5 rounded-xl hover:bg-primary-fixed transition-colors">
               💬 Reservasi Meja
             </a>
-            <a href="https://gofood.co.id" target="_blank" rel="noopener noreferrer"
+            <a href={GOFOOD_URL} target="_blank" rel="noopener noreferrer"
               className="mt-2 block text-center bg-white/10 text-white font-bold text-xs py-2.5 rounded-xl hover:bg-white/20 transition-colors border border-white/10">
               🛵 GoFood
             </a>
@@ -336,7 +336,7 @@ export default function MenuPage() {
               Tersedia di GoFood — pesan dari mana saja, diantar ke depan pintu kamu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://gofood.co.id" target="_blank" rel="noopener noreferrer"
+              <a href={GOFOOD_URL} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-white text-primary font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform shadow-xl">
                 🛵 Pesan via GoFood
               </a>
