@@ -36,17 +36,20 @@ export default function Footer() {
       </div>
 
       <div>
-        <p className="font-label tracking-widest text-primary mb-5 text-xs">NEWSLETTER</p>
-        <p className="text-xs text-text-light mb-4">Info promo & event mingguan.</p>
-        <div className="relative">
-          <input
-            type="email"
-            placeholder="Email Anda"
-            className="w-full bg-transparent border-b border-border py-2 text-sm focus:outline-none focus:border-primary transition-colors placeholder:text-text-light/50"
-          />
-          <button className="absolute right-0 bottom-2 text-primary font-bold text-xs font-label tracking-widest hover:opacity-70 transition-opacity">
-            GABUNG
-          </button>
+        <p className="font-label tracking-widest text-primary mb-5 text-xs">IKUTI KAMI</p>
+        <div className="space-y-3 text-sm">
+          <a href="https://instagram.com/kataloji.co" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 text-text-light hover:text-primary transition-colors">
+            📸 <span>@kataloji.co</span>
+          </a>
+          <a href="https://gofood.co.id" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 text-text-light hover:text-primary transition-colors">
+            🛵 <span>GoFood</span>
+          </a>
+          <a href="https://wa.me/62" target="_blank" rel="noopener noreferrer"
+             className="flex items-center gap-3 text-text-light hover:text-primary transition-colors">
+            💬 <span>WhatsApp</span>
+          </a>
         </div>
       </div>
 
