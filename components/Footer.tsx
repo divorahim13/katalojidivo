@@ -34,7 +34,7 @@ export default function Footer() {
       <div className="py-16 px-8 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
           <Image src="/images/logo.jpg" alt="Kataloji" width={130} height={52}
-            className="mb-5 object-contain" style={{ filter: "brightness(0) invert(1)", opacity: 0.9, height: 48, width: "auto" }}/>
+            className="mb-5 rounded-xl object-contain" style={{ height: 52, width: "auto" }}/>
           <p className="text-white/50 max-w-xs leading-relaxed text-sm mb-6">
             Coffee, eatery, dan inspirasi harian di jantung Jakarta Timur. Served fresh, served with heart.
           </p>
