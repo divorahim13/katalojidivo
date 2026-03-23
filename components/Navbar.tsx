@@ -64,7 +64,7 @@ export default function Navbar() {
             alt="Kataloji Coffee and Eatery"
             width={120}
             height={48}
-            className="object-contain h-10 w-auto"
+            className="object-contain rounded-xl h-10 w-auto shadow-sm ring-1 ring-black/5"
             priority
           />
         </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
       {/* ── DRAWER ── */}
       <div className={`drawer fixed left-0 top-0 h-screen w-72 z-[60] flex flex-col bg-[#fcf9f3] shadow-2xl ${drawerOpen ? 'open' : ''}`}>
         <div className="flex items-center justify-between px-7 py-6 border-b border-[#c6c7be]/20">
-          <Image src="/images/logo.jpg" alt="Kataloji" width={100} height={40} className="object-contain h-9 w-auto"/>
+          <Image src="/images/logo.jpg" alt="Kataloji" width={100} height={40} className="object-contain rounded-xl h-9 w-auto shadow-sm ring-1 ring-black/5"/>
           <button onClick={closeDrawer}
             className="w-9 h-9 rounded-full bg-[#f0eee8] flex items-center justify-center hover:bg-[#dde6ce] transition-colors">
             <Icons.Close className="w-4 h-4 text-primary"/>
