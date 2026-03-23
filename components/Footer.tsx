@@ -1,10 +1,19 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
   return (
     <footer className="py-20 px-10 grid grid-cols-1 md:grid-cols-4 gap-12 bg-surface-low border-t border-border/30">
       <div className="md:col-span-2">
-        <p className="text-3xl font-headline italic text-primary mb-5">Kataloji</p>
+        <div className="mb-5">
+          <Image
+            src="/images/logo.jpg"
+            alt="Kataloji Coffee and Eatery"
+            width={150}
+            height={60}
+            className="object-contain"
+          />
+        </div>
         <p className="text-text-light max-w-sm mb-8 leading-relaxed text-sm">
           Coffee, eatery, dan inspirasi harian di jantung Jakarta Timur. Served fresh, served with heart.
         </p>
@@ -54,7 +63,10 @@ export default function Footer() {
       </div>
 
       <div className="md:col-span-4 border-t border-border/30 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-text-light text-xs">© 2024 Kataloji Coffee & Eatery. Cipayung, Jakarta Timur.</p>
+        <div className="flex items-center gap-3">
+          <Image src="/images/logo.jpg" alt="Kataloji" width={80} height={32} className="object-contain opacity-60"/>
+          <p className="text-text-light text-xs">© 2024 Kataloji Coffee & Eatery. Cipayung, Jakarta Timur.</p>
+        </div>
         <div className="flex gap-8">
           <span className="text-xs font-label text-primary opacity-30 tracking-widest">EST. 2021</span>
           <span className="text-xs font-label text-primary opacity-30 tracking-widest">CIPAYUNG JKTM</span>

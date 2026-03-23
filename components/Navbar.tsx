@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const NAV_LINKS = [
@@ -56,8 +57,15 @@ export default function Navbar() {
     <>
       {/* Nav */}
       <nav className={`fixed top-0 w-full z-50 flex justify-between items-center px-8 transition-all duration-500 ${scrolled ? 'nav-scrolled py-3' : 'py-5'}`}>
-        <Link href="/" className="text-2xl font-headline italic text-primary tracking-tight">
-          Kataloji
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.jpg"
+            alt="Kataloji Coffee and Eatery"
+            width={130}
+            height={52}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex gap-8 items-center">
@@ -107,8 +115,13 @@ export default function Navbar() {
       <div className={`drawer fixed left-0 top-0 h-screen w-72 z-[60] flex flex-col p-8 bg-surface shadow-2xl ${drawerOpen ? 'open' : ''}`}>
         <div className="flex items-center justify-between mb-12">
           <div>
-            <p className="text-2xl font-headline italic text-primary">Kataloji</p>
-            <p className="text-xs text-text-muted tracking-widest font-label">SERVED U EVERYDAY</p>
+            <Image
+              src="/images/logo.jpg"
+              alt="Kataloji Coffee and Eatery"
+              width={110}
+              height={44}
+              className="object-contain"
+            />
           </div>
           <button onClick={closeDrawer} className="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center text-xl leading-none">
             ✕
