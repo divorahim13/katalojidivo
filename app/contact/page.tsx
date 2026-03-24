@@ -73,7 +73,7 @@ export default function ContactPage() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3!2d106.88!3d-6.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjEnMDAuMCJTIDEwNsKwNTMnMDAuMCJF!5e0!3m2!1sid!2sid!4v1"
               width="100%" height="100%"
-              className="grayscale hover:grayscale-0 transition-all duration-700 border-0"
+              className="border-0"
               allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
@@ -185,7 +185,7 @@ export default function ContactPage() {
           {[
             { href:'https://wa.me/62',               icon:'💬', label:'WhatsApp',  sub:'Respon cepat, 10:00–22:00',  bg:'bg-green-50  border-green-100  hover:bg-green-100' },
             { href:'https://instagram.com/kataloji.co', icon:'📸', label:'Instagram', sub:'@kataloji.co · 1.8k+ followers', bg:'bg-pink-50   border-pink-100   hover:bg-pink-100' },
-            { href:'https://gofood.co.id',            icon:'🛵', label:'GoFood',    sub:'Order antar ke rumah',       bg:'bg-red-50    border-red-100    hover:bg-red-100' },
+            { href:'https://gofood.link/a/BNkfoSL',            icon:'🛵', label:'GoFood',    sub:'Order antar ke rumah',       bg:'bg-red-50    border-red-100    hover:bg-red-100' },
           ].map((c, i) => (
             <AnimateIn key={c.label} delay={i * 80}>
               <a href={c.href} target="_blank" rel="noopener noreferrer"
