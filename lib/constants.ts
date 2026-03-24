@@ -7,7 +7,7 @@ export const IMGS = {
   bowl:      '/images/ricebowl.webp',
   pancake:   '/images/pancake.webp',
   frenchfries:'/images/frenchfries.webp',
-  lelact: '/images/le lact.webp',
+  lelact: '/images/lelact.webp',
   nasigoreng:'/images/nasigoreng.webp',
   livemusic: '/images/comunity.webp',
   rooftop:   '/images/visitus.webp',
