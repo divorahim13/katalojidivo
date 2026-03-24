@@ -3,6 +3,7 @@ import Link from 'next/link'
 import AnimateIn from '@/components/AnimateIn'
 import Icons from '@/components/Icons'
 import { IMGS, MENU_ITEMS, GOFOOD_URL, WA_URL } from '@/lib/constants'
+import GalleryDrag from '@/components/GalleryDrag'
 
 export default function HomePage() {
   return (
@@ -131,7 +132,7 @@ export default function HomePage() {
             </div>
             <div className="w-full md:w-[40%] aspect-video rounded-xl overflow-hidden flex-shrink-0">
               <Image src={IMGS.livemusic} alt="Live music" width={500} height={280}
-                className="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 loading="lazy"/>
             </div>
           </AnimateIn>
@@ -221,15 +222,10 @@ export default function HomePage() {
             <p className="text-[#454840] text-sm italic font-headline hidden md:block">drag to explore →</p>
           </AnimateIn>
         </div>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar px-8 pb-6 cursor-grab active:cursor-grabbing">
-          {IMGS.gallery.map((src, i) => (
-            <div key={i} className="flex-shrink-0 h-72 md:h-96 rounded-2xl overflow-hidden hover:scale-[1.02] transition-transform duration-500"
-              style={{ minWidth: [260,380,300,340,260][i] }}>
-              <Image src={src} alt={`Gallery ${i+1}`} width={380} height={380}
-                className="w-full h-full object-cover" loading="lazy"/>
-            </div>
-          ))}
-        </div>
+        <GalleryDrag
+          images={IMGS.gallery}
+          widths={[260, 380, 300, 340, 260]}
+        />
       </section>
 
       {/* ── TESTIMONIAL ── */}
@@ -289,7 +285,7 @@ export default function HomePage() {
           </div>
           <div className="h-64 lg:h-auto relative overflow-hidden">
             <Image src={IMGS.rooftop} alt="Rooftop Kataloji" fill
-              className="object-cover  hover:grayscale-0 transition-all duration-700"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               sizes="(max-width:1024px) 100vw, 50vw" loading="lazy"/>
           </div>
         </AnimateIn>
