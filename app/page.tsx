@@ -131,7 +131,7 @@ export default function HomePage() {
             </div>
             <div className="w-full md:w-[40%] aspect-video rounded-xl overflow-hidden flex-shrink-0">
               <Image src={IMGS.livemusic} alt="Live music" width={500} height={280}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700"
                 loading="lazy"/>
             </div>
           </AnimateIn>
@@ -289,7 +289,7 @@ export default function HomePage() {
           </div>
           <div className="h-64 lg:h-auto relative overflow-hidden">
             <Image src={IMGS.rooftop} alt="Rooftop Kataloji" fill
-              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="object-cover  hover:grayscale-0 transition-all duration-700"
               sizes="(max-width:1024px) 100vw, 50vw" loading="lazy"/>
           </div>
         </AnimateIn>

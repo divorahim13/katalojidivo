@@ -75,9 +75,9 @@ const MENU = {
 }
 
 const HERO_ITEMS = [
-  { name: 'Sop Buntut',             price: 'Rp 75.000', label: '🔥 FAVORIT SEPANJANG MASA', img: IMGS.bowl,   desc: 'Tulang buntut sapi empuk, kuah bening gurih, sambal hijau, dan emping renyah.' },
-  { name: 'Iga Bakar Sambal Matah', price: 'Rp 70.000', label: '⭐ PALING SERING DIPESAN',  img: IMGS.burger, desc: 'Iga sapi bakar juicy dengan sambal matah Bali yang segar pedas. Setiap gigitan bikin nagih.' },
-  { name: 'Kreme Le Brulle',        price: 'Rp 34.000', label: '✨ SIGNATURE DRINK',         img: IMGS.latte,  desc: 'Kopi susu dengan karakter creme brulee — karamel manis yang nempel di lidah.' },
+  { name: 'Sop Buntut',             price: 'Rp 75.000', label: '🔥 FAVORIT SEPANJANG MASA', img: IMGS.sopbuntut,   desc: 'Tulang buntut sapi empuk, kuah bening gurih, sambal hijau, dan emping renyah.' },
+  { name: 'Iga Bakar Sambal Matah', price: 'Rp 70.000', label: '⭐ PALING SERING DIPESAN',  img: IMGS.igabakar, desc: 'Iga sapi bakar juicy dengan sambal matah Bali yang segar pedas. Setiap gigitan bikin nagih.' },
+  { name: 'Kreme Le Brulle',        price: 'Rp 34.000', label: '✨ SIGNATURE DRINK',         img: IMGS.kreme,  desc: 'Kopi susu dengan karakter creme brulee — karamel manis yang nempel di lidah.' },
 ]
 
 type MenuItem = { name: string; price: string; badge: string; desc: string }
